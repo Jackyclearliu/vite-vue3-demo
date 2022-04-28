@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
-import 'maptalks/dist/maptalks.css'
+import { moduleA } from './modules/moduleA'
+import { moduleB } from './modules/moduleB'
 import * as maptalks from 'maptalks'
 
 export const store = createStore({
@@ -80,5 +81,8 @@ export const store = createStore({
       })
     }
   },
-  modules: {}
+  modules: {
+    a: moduleA,
+    b: moduleB
+  }
 })
